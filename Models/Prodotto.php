@@ -11,6 +11,7 @@ class Prodotto
     public $descrizione;
     public $immagine;
     public $categoria;
+    public $sconto;
 
 
     /**
@@ -38,5 +39,15 @@ class Prodotto
     public function get_details()
     {
         return "";
+    }
+
+    public function prodotto_sconto($percentuale)
+    {
+        if ($percentuale > 0 && $percentuale < 100) {
+            $this->sconto = $this->prezzo - ($this->prezzo / 100 * $percentuale);
+            return $this->sconto;
+        } else {
+            throw new Exception("non è una percentuale calcolabile");
+        }
     }
 }

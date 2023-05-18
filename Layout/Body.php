@@ -23,6 +23,13 @@ require_once __DIR__ . "/../Database/db.php";
                                     <p class="card-text"><?php echo $prodotto->get_details() ?></p>
                                 </div>
                                 <p class="prezzo"> <?php echo $prodotto->prezzo ?>€</p>
+                                <p class="prezzo">Scontato 20%:
+                                    <?php
+                                    try {
+                                        echo $prodotto->prodotto_sconto(10);
+                                    } catch (Exception $err) {
+                                        echo $err;
+                                    }  ?></p>
                             </div>
                         </div>
                     </div>
