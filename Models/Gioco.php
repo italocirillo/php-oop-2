@@ -5,9 +5,14 @@ class Gioco extends Prodotto
 {
     public $tipologia;
 
-    function __construct(Categoria $_categoria, $_tipo = "", $_nome = "", $_prezzo = 0, $_descrizione = "", $_immagine = "", $_tipologia = "")
+    function __construct(Categoria $_categoria, $_nome = "", $_prezzo = 0, $_descrizione = "", $_immagine = "", $_tipologia = "")
     {
-        parent::__construct($_categoria, $_tipo, $_nome, $_prezzo, $_descrizione, $_immagine);
+        parent::__construct($_categoria, $_nome, $_prezzo, $_descrizione, $_immagine);
         $this->tipologia = $_tipologia;
+    }
+
+    public function get_details()
+    {
+        return "{$this->tipologia}";
     }
 }
