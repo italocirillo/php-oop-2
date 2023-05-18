@@ -29,7 +29,11 @@ require_once __DIR__ . "/../Database/db.php";
                                         echo $prodotto->prodotto_sconto(10);
                                     } catch (Exception $err) {
                                         echo $err;
-                                    }  ?></p>
+                                    }  ?>
+                                </p>
+                                <p><?php $prodotto->setFabricazione("Italia");
+                                    echo $prodotto->getFabricazione()  ?></p>
+
                             </div>
                         </div>
                     </div>

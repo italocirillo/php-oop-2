@@ -3,6 +3,7 @@ require_once __DIR__ . "/Prodotto.php";
 
 class Gioco extends Prodotto
 {
+
     public $tipologia;
 
     function __construct(Categoria $_categoria, $_nome = "", $_prezzo = 0, $_descrizione = "", $_immagine = "", $_tipologia = "")

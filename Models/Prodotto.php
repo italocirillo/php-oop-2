@@ -1,11 +1,13 @@
 <?php
-
+require_once __DIR__ . "/Fabricazione.php";
 /** ## Prodotti class
  * defines prodotti class
  * @italocirillo
  */
 class Prodotto
 {
+    use Fabricazione;
+
     public $prezzo;
     public $nome;
     public $descrizione;
